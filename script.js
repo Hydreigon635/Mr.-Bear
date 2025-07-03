@@ -51,7 +51,7 @@ const story = {
     text: "Mr. Bear opened the door, he looks friendly. After the introduction, Mr. Bear shows you the house, he asked if you are hungry.",
     options: [
       { text: "Tell him you are not hungry", next: "q4", type: "b" },
-      { text: "Say yes and eat Mr. Bear's food", next: "dead1", type: "c" },
+      { text: "Say yes and eat Mr. Bear's food", next: "dead", type: "c" },
       {text: "Tell him you will definitely eat later", next: "q5", type: "a"}
     ]
   },
@@ -61,7 +61,7 @@ const story = {
     text: "Mr. Bear was angry, he hates loud sounds. After the introduction, Mr. Bear shows you the house, he asked if you are hungry. ",
     options: [
         { text: "Tell him you are not hungry", next: "q4", type: "b" },
-        { text: "Say yes and eat Mr. Bear's food", next: "dead1", type: "c" },
+        { text: "Say yes and eat Mr. Bear's food", next: "dead", type: "c" },
         {text: "Tell him you will definitely eat later", next: "q5", type: "a"}
       ]
   },
@@ -70,7 +70,7 @@ q3: {
     text: "Mr. Bear opened the door after a while, he looked confused. After the introduction, Mr. Bear shows you the house, he asked if you are hungry.",
     options: [
         { text: "Tell him you are not hungry", next: "q4", type: "b" },
-        { text: "Say yes and eat Mr. Bear's food", next: "dead1", type: "c" },
+        { text: "Say yes and eat Mr. Bear's food", next: "dead", type: "c" },
         {text: "Tell him you will definitely eat later", next: "q5", type: "a"}
       ]
 },
@@ -272,13 +272,17 @@ dead4: {
     options:[],
     isDeath: true
   },
-  dead1: {
+  dead: {
     image: "died.png",
     text: "Mr. Bear smiled at you while you were eating, You blacked out shortly",
     options: [],
     isDeath: true
   },
-
+dead1: {
+  image: "died.png",
+  text: "Mr. Didn't like your attitude. He choked you to death",
+  options: [],
+  itDeath: true},
   dead2: {
     image: "died.png",
     text: "You wake up and see that Mr. Bear has been watching you sleep, he suffocates you until you die.",
