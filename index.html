@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1000, initial-scale=1.0" />
+  <title>Mr Bear</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="game-container">
+    <img id="bg-image" src="start.png" />
+    <div id="hearts"></div>
+    <div id="text-box" class="overlay"></div>
+    <div id="options"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <audio id="bg-music" src="Song.mp3" loop></audio>
+
+  <script>
+      document.body.addEventListener('click', function() {
+          document.getElementById('bg-music').play();
+      });
+  </script>
+</body>
+</html>
